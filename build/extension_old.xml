@@ -20,12 +20,24 @@
   <id>com.freshplanet.AirChartboost</id>
   <versionNumber>1.0</versionNumber>
   <platforms>
+    <platform name="iPhone-ARM">
+            <applicationDeployment>
+                <nativeLibrary>libAirChartboost.a</nativeLibrary>
+                <initializer>AirChartboostExtInitializer</initializer>
+                <finalizer>AirChartboostExtFinalizer</finalizer>
+            </applicationDeployment>
+    </platform>
+ 
    <platform name="Android-ARM"> 
         <applicationDeployment> 
-            <nativeLibrary>libChartBoost.jar</nativeLibrary> 
+            <nativeLibrary>libAirChartboost.jar</nativeLibrary> 
             <initializer>com.freshplanet.ane.AirChartboost.AirChartboostExtension</initializer> 
             <finalizer>com.freshplanet.ane.AirChartboost.AirChartboostExtension</finalizer> 
         </applicationDeployment>
     </platform>
+    
+    <platform name="default"> 
+        <applicationDeployment/> 
+    </platform> 
   </platforms>
 </extension>
