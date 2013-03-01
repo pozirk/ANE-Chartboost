@@ -165,7 +165,7 @@ public class AirChartboostDelegate implements ChartboostDelegate
 	public boolean shouldDisplayLoadingViewForMoreApps()
 	{
 		AirChartboostExtension.log("Should display loading view for More Apps? Yes.");
-		return true;
+		return false;
 	}
 
 	/*
@@ -181,7 +181,7 @@ public class AirChartboostDelegate implements ChartboostDelegate
 	public boolean shouldRequestMoreApps()
 	{
 		AirChartboostExtension.log("Should request More Apps? Yes.");
-		return true;
+		return false;
 	}
 
 	/*
@@ -197,7 +197,7 @@ public class AirChartboostDelegate implements ChartboostDelegate
 	public boolean shouldDisplayMoreApps()
 	{
 		AirChartboostExtension.log("Should display More Apps? Yes.");
-		return true;
+		return false;
 	}
 
 	/*
