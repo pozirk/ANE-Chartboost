@@ -18,9 +18,7 @@ The ANE binary (AirChartboost.ane) is located in the *bin* folder. You should ad
 On Android, you should add the following activity in your application descriptor:
 
     ```xml
-    <activity android:name="com.chartboost.sdk.CBImpressionActivity"
-				  android:excludeFromRecents="true" 
-				  android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+    <activity android:name="com.chartboost.sdk.CBImpressionActivity" android:excludeFromRecents="true" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:launchMode="singleTop" />
     ```
 
 

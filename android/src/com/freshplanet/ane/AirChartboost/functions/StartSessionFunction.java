@@ -18,12 +18,10 @@
 
 package com.freshplanet.ane.AirChartboost.functions;
 
-import android.content.Intent;
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.adobe.fre.FREObject;
 import com.chartboost.sdk.Chartboost;
-import com.chartboost.sdk.CBImpressionActivity;
 import com.freshplanet.ane.AirChartboost.AirChartboostDelegate;
 import com.freshplanet.ane.AirChartboost.AirChartboostExtension;
 
@@ -45,15 +43,13 @@ public class StartSessionFunction implements FREFunction
 			return null;
 		}
 		
-		Intent intent = new Intent(context.getActivity(), CBImpressionActivity.class);
-		context.getActivity().startActivity(intent);
-		
 		// Start Chartboost session
 		Chartboost cb = Chartboost.sharedChartboost();
 		cb.onCreate(context.getActivity(), appId, appSignature, new AirChartboostDelegate());
 		cb.setImpressionsUseActivities(true);
 		cb.startSession();
-		
+		cb.onStart(context.getActivity()); //aggggrrrr, nothing show up without this line
+
 		return null;
 	}
 }
